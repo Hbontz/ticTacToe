@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Farsan|Lalezar");
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  text-align: center;
+  background: #0f1626;
+  color: #f5f5f5; }
+
+.top {
+  background: #ab987a;
+  height: 80px;
+  margin-bottom: 30px; }
+
+.choose {
+  text-transform: uppercase;
+  font-family: 'Lalezar', cursive;
+  font-size: 1.6vw; }
+  @media (max-width: 1312.5px) {
+    .choose {
+      font-size: 21px; } }
+
+.choiceX, .choiceO {
+  font-family: 'Farsan', cursive;
+  cursor: pointer;
+  font-size: 60px;
+  color: #ff533d;
+  vertical-align: middle; }
+
+.message {
+  display: none;
+  font-family: 'Farsan', cursive;
+  font-size: 3vw;
+  padding-top: 2%; }
+  @media (max-width: 833.33333px) {
+    .message {
+      font-size: 25px; } }
+
+.board {
+  max-width: 100%; }
+
+.boardRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 auto 0 auto; }
+
+.square {
+  width: 115px;
+  height: 115px;
+  font-family: 'Farsan', cursive;
+  cursor: pointer;
+  font-size: 60px;
+  padding-top: 18px;
+  border: 3px solid #f5f5f5; }
+
+.zero {
+  border-top: #0f1626;
+  border-left: #0f1626; }
+
+.one {
+  border-top: #0f1626; }
+
+.two {
+  border-top: #0f1626;
+  border-right: #0f1626; }
+
+.three {
+  border-left: #0f1626; }
+
+.five {
+  border-right: #0f1626; }
+
+.six {
+  border-left: #0f1626;
+  border-bottom: #0f1626; }
+
+.seven {
+  border-bottom: #0f1626; }
+
+.eight {
+  border-bottom: #0f1626;
+  border-right: #0f1626; }
+
+button {
+  color: #f5f5f5;
+  background-color: #ff533d;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Lalezar', cursive;
+  font-size: 18px;
+  padding-top: 3px;
+  margin-top: 50px; }
+
+.avoidClicks {
+  pointer-events: none; }

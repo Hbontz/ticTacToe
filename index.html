@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row top">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+          <div class="col-xs-6 choose" id="hideIt1">Click:    <span class="choiceX" id="playerX">X</span>
+          </div>
+          <div class="col-xs-6 choose" id="hideIt2">Click:    <span class="choiceO" id="playerO">O</span>
+          </div>
+          <div class="message" id="playerFirst">You go first.</div>
+          <div class="message" id="computerFirst">The computer goes first.</div>
+          <div class="message" id="tie">It's a tie.</div>
+          <div class="message" id="win">The computer wins.</div>
+        </div>
+      </div>
+      <div class="board" id="board">
+      <div class="row boardRow">
+        <div class="square zero" id="0"></div>
+        <div class="square one" id="1"></div>    
+        <div class="square two" id="2"></div>
+      </div>
+      <div class="row boardRow">  
+        <div class="square three" id="3"></div>
+        <div class="square four" id="4"></div>
+        <div class="square five" id="5"></div>
+      </div>
+      <div class="row boardRow">
+        <div class="square six" id="6"></div>
+        <div class="square seven" id="7"></div>
+        <div class="square eight" id="8"></div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="reset" id="resetBtn">Reset</button>
+    </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

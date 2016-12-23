@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Farsan|Lalezar');
+
+$grey: #0f1626;
+$white: #f5f5f5;
+$tan: #ab987a;
+$coral: #ff533d;
+
+/// Viewport sized typography with minimum and maximum values
+/// @author Eduardo Boucas (@eduardoboucas)
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  @if $fallback {
+    font-size: $fallback;
+  }
+  font-size: $responsive;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background: $grey;
+  color: $white;
+}
+.top {
+  background: $tan;
+  height: 80px;
+  margin-bottom: 30px;
+}
+.choose {
+  text-transform: uppercase;
+  font-family: 'Lalezar', cursive;
+  @include responsive-font(1.6vw, 21px);
+}
+.choiceX, .choiceO {
+  font-family: 'Farsan', cursive;
+  cursor: pointer;
+  font-size: 60px;
+  color: $coral;
+  vertical-align: middle;
+} 
+.message {
+  display: none;
+  font-family: 'Farsan', cursive;
+  @include responsive-font(3vw, 25px);
+  padding-top: 2%;
+}
+.board {
+  max-width: 100%;
+}
+.boardRow {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+}
+.square {
+  width: 115px;
+  height: 115px;
+  font-family: 'Farsan', cursive;
+  cursor: pointer;
+  font-size: 60px;
+  padding-top: 18px;
+  border: 3px solid $white;
+}
+.zero {
+  border-top: $grey;
+  border-left: $grey;
+}
+.one {
+  border-top: $grey;
+}
+.two {
+  border-top: $grey;
+  border-right: $grey;
+}
+.three {
+  border-left: $grey;
+}
+.five {
+  border-right: $grey;
+}
+.six {
+  border-left: $grey;
+  border-bottom: $grey;
+}
+.seven {
+  border-bottom: $grey;
+}
+.eight {
+  border-bottom: $grey;
+  border-right: $grey;
+}
+button {
+  color: $white;
+  background-color: $coral;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Lalezar', cursive;
+  font-size: 18px;
+  padding-top: 3px;
+  margin-top: 50px;
+}
+.avoidClicks {
+  pointer-events: none;
+}
+
